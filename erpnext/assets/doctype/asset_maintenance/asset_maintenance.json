@@ -1,109 +1,215 @@
 {
  "actions": [],
- "autoname": "field:asset_name",
+ "autoname": "naming_series:",
  "creation": "2017-10-19 16:50:22.879545",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "asset_name",
-  "asset_category",
+  "sec_break_1",
   "company",
-  "column_break_3",
-  "item_code",
+  "emp_name",
+  "job_title",
+  "date",
+  "end_date",
+  "col_break_1",
+  "naming_series",
+  "asset_name",
   "item_name",
-  "section_break_6",
+  "asset_category",
+  "maintenance",
+  "transfer",
+  "sec_break_2",
+  "priority_request",
+  "repair_cost",
+  "main_details",
+  "sec_break_3",
   "maintenance_team",
-  "column_break_9",
+  "col_break_2",
   "maintenance_manager",
   "maintenance_manager_name",
-  "section_break_8",
-  "asset_maintenance_tasks"
+  "sec_break_4",
+  "asset_maintenance_tasks",
+  "sec_break_5",
+  "assets",
+  "col_break_3",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "asset_name",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Asset Name",
-   "options": "Asset",
-   "reqd": 1,
-   "unique": 1
+   "label": "\u0627\u0633\u0645 \u0627\u0644\u0627\u0635\u0644",
+   "options": "Asset"
   },
   {
    "fetch_from": "asset_name.asset_category",
    "fieldname": "asset_category",
    "fieldtype": "Read Only",
-   "label": "Asset Category"
-  },
-  {
-   "fetch_from": "asset_name.item_code",
-   "fieldname": "item_code",
-   "fieldtype": "Read Only",
-   "label": "Item Code"
-  },
-  {
-   "fetch_from": "asset_name.item_name",
-   "fieldname": "item_name",
-   "fieldtype": "Read Only",
-   "label": "Item Name"
-  },
-  {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
+   "label": "\u062a\u0635\u0646\u064a\u0641 \u0627\u0644\u0627\u0635\u0644"
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
-   "label": "Company",
+   "label": "\u0627\u0644\u0634\u0631\u0643\u0629",
    "options": "Company",
    "reqd": 1
-  },
-  {
-   "fieldname": "section_break_6",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "maintenance_team",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Maintenance Team",
-   "options": "Asset Maintenance Team",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_9",
-   "fieldtype": "Column Break"
+   "label": "\u0641\u0631\u064a\u0642 \u0627\u0644\u0635\u064a\u0627\u0646\u0629",
+   "options": "Asset Maintenance Team"
   },
   {
    "fetch_from": "maintenance_team.maintenance_manager",
    "fieldname": "maintenance_manager",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Maintenance Manager",
+   "label": "\u0645\u062f\u064a\u0631 \u0627\u0644\u0635\u064a\u0627\u0646\u0629",
    "read_only": 1
   },
   {
    "fetch_from": "maintenance_team.maintenance_manager_name",
    "fieldname": "maintenance_manager_name",
    "fieldtype": "Read Only",
-   "label": "Maintenance Manager Name"
-  },
-  {
-   "fieldname": "section_break_8",
-   "fieldtype": "Section Break",
-   "label": "Tasks"
+   "label": "\u0627\u0633\u0645 \u0645\u062f\u064a\u0631 \u0627\u0644\u0635\u064a\u0627\u0646\u0629"
   },
   {
    "fieldname": "asset_maintenance_tasks",
    "fieldtype": "Table",
-   "label": "Maintenance Tasks",
-   "options": "Asset Maintenance Task",
+   "label": "\u0645\u0647\u0627\u0645 \u0627\u0644\u0635\u064a\u0627\u0646\u0629",
+   "options": "Asset Maintenance Task"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Asset Maintenance",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "asset_name.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "label": "\u0631\u0645\u0632 \u0627\u0644\u0627\u0635\u0644"
+  },
+  {
+   "fieldname": "sec_break_1",
+   "fieldtype": "Section Break",
+   "label": "\u0646\u0645\u0648\u0630\u062c \u0637\u0644\u0628 \u0635\u064a\u0627\u0646\u0629 / \u0646\u0642\u0644 \u0627\u062b\u0627\u062b"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "label": "\u0627\u0644\u0631\u0642\u0645 \u0627\u0644\u062a\u0633\u0644\u0633\u0644\u064a",
+   "options": "MAINT-MR-",
+   "reqd": 1,
+   "set_only_once": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "emp_name",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u0627\u0633\u0645 ",
+   "options": "Employee",
    "reqd": 1
+  },
+  {
+   "fetch_from": "emp_name.designation",
+   "fieldname": "job_title",
+   "fieldtype": "Read Only",
+   "label": "\u0627\u0644\u0645\u0633\u0645\u0649 \u0627\u0644\u0648\u0638\u064a\u0641\u064a",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "maintenance",
+   "fieldtype": "Check",
+   "label": "\u0637\u0644\u0628 \u0635\u064a\u0627\u0646\u0629"
+  },
+  {
+   "default": "0",
+   "fieldname": "transfer",
+   "fieldtype": "Check",
+   "label": "\u0646\u0642\u0644 \u0623\u062b\u0627\u062b"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "\u0627\u0644\u062a\u0627\u0631\u064a\u062e",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "\u064a\u062c\u0628 \u0627\u0646\u0647\u0627\u0621 \u0627\u0644\u0639\u0645\u0644 \u0628\u0645\u062f\u0629 \u0627\u0642\u0635\u0627\u0647\u0627 ",
+   "reqd": 1
+  },
+  {
+   "depends_on": "maintenance",
+   "fieldname": "sec_break_2",
+   "fieldtype": "Section Break",
+   "label": "\u0627\u0644\u0635\u064a\u0627\u0646\u0629"
+  },
+  {
+   "fieldname": "main_details",
+   "fieldtype": "Small Text",
+   "label": "\u0627\u0644\u0631\u062c\u0627\u0621 \u0639\u0645\u0644 \u0627\u0644\u0644\u0627\u0632\u0645 \u0646\u062d\u0648 \u0627\u0635\u0644\u0627\u062d \u0648\u0635\u064a\u0627\u0646\u0629 "
+  },
+  {
+   "depends_on": "maintenance",
+   "fieldname": "sec_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "maintenance",
+   "fieldname": "sec_break_4",
+   "fieldtype": "Section Break",
+   "label": "\u0627\u0644\u0645\u0647\u0627\u0645"
+  },
+  {
+   "fieldname": "col_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priority_request",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u0627\u0648\u0644\u0648\u064a\u0629",
+   "options": "\u0637\u0627\u0631\u0626\n\u0645\u062a\u0648\u0633\u0637\n\u0645\u0646\u062e\u0641\u0636"
+  },
+  {
+   "depends_on": "transfer",
+   "fieldname": "sec_break_5",
+   "fieldtype": "Section Break",
+   "label": "\u0646\u0642\u0644 \u0627\u0644\u0627\u062b\u0627\u062b"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assets",
+   "fieldtype": "Table",
+   "label": "\u0627\u0644\u0627\u062b\u0627\u062b \u0627\u0644\u062b\u0627\u0628\u062a ",
+   "options": "Asset Movement Item"
+  },
+  {
+   "fieldname": "repair_cost",
+   "fieldtype": "Currency",
+   "label": "\u0642\u064a\u0645\u0629 \u0627\u0644\u0635\u064a\u0627\u0646\u0629"
   }
  ],
+ "is_submittable": 1,
  "links": [],
- "modified": "2020-05-28 20:28:32.993823",
+ "modified": "2021-08-10 13:02:36.217712",
  "modified_by": "Administrator",
  "module": "Assets",
  "name": "Asset Maintenance",
@@ -117,7 +223,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Quality Manager",
+   "role": "Maintenance User",
    "share": 1,
    "write": 1
   },
@@ -129,12 +235,14 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Manufacturing User",
+   "role": "Maintenance Manager",
    "share": 1,
    "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "track_changes": 1
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

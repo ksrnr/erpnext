@@ -20,12 +20,14 @@
   "tax_withholding_category",
   "default_bank_account",
   "lead_name",
+  "customer_status",
   "image",
   "column_break0",
   "account_manager",
   "customer_group",
   "territory",
   "tax_id",
+  "vat_reg_no",
   "tax_category",
   "so_required",
   "dn_required",
@@ -44,6 +46,7 @@
   "column_break1",
   "contact_html",
   "primary_address_and_contact_detail",
+  "city_cust",
   "customer_primary_contact",
   "mobile_no",
   "email_id",
@@ -305,14 +308,17 @@
   {
    "fetch_from": "customer_primary_contact.mobile_no",
    "fieldname": "mobile_no",
-   "fieldtype": "Read Only",
-   "label": "Mobile No"
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone"
   },
   {
    "fetch_from": "customer_primary_contact.email_id",
    "fieldname": "email_id",
-   "fieldtype": "Read Only",
-   "label": "Email Id"
+   "fieldtype": "Data",
+   "label": "Email Id",
+   "options": "Email",
+   "unique": 1
   },
   {
    "fieldname": "column_break_26",
@@ -493,6 +499,28 @@
    "fieldtype": "Link",
    "label": "Tax Withholding Category",
    "options": "Tax Withholding Category"
+  },
+  {
+   "fieldname": "vat_reg_no",
+   "fieldtype": "Data",
+   "label": "VAT Reg. No."
+  },
+  {
+   "fieldname": "city_cust",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "City",
+   "options": "Riyadh\nJeddah\nMakkah\nTaif\nMadina\nDammam\nQatif\nTarut\nKhobar\nSaihat\nJubail\nRas Tanura\nOnaizah\nAsir\nAbha\nAl Baha\nKhamis Mushait\nJazan\nQassim\nHail\nHafir Al Batin\nRafha\nSkaka\nBuraidah\nAL Hassa\nAl Houfof\nSajir\nAl Kharj\nShaybah\nAl Kafji\nAl jishah\nAl Mobaraz\nAl Namas\nAl Quwaiyah\nSafwa\nAr Rass\nAl Ula\nAl-qudaih\nAn Nuayriyah\nArar\nbqaiq\nDahran\nDhahban\nThuwal\nYanbu\nHaql\nTabuk\nHaradh"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "customer_status",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Customer Status",
+   "options": "\nVerified\nUnder Review\nCancelled",
+   "translatable": 1
   }
  ],
  "icon": "fa fa-user",
@@ -500,7 +528,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-01-28 12:54:57.258959",
+ "modified": "2021-08-18 00:40:00.709294",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",

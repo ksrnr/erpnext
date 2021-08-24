@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "ITG.##",
  "creation": "2021-05-07 18:16:40.621421",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -28,7 +29,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-19 13:48:16.742303",
+ "modified": "2021-08-05 22:44:58.742233",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Supplier Item Group",

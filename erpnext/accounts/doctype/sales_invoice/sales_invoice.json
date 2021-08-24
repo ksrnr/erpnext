@@ -12,6 +12,7 @@
   "customer",
   "customer_name",
   "tax_id",
+  "vat_reg_no",
   "pos_profile",
   "is_pos",
   "is_consolidated",
@@ -1966,6 +1967,13 @@
    "fieldname": "disable_rounded_total",
    "fieldtype": "Check",
    "label": "Disable Rounded Total"
+  },
+  {
+   "fieldname": "vat_reg_no",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "VAT Reg. No."
   }
  ],
  "icon": "fa fa-file-text",
@@ -1978,7 +1986,7 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2021-05-20 22:48:33.988881",
+ "modified": "2021-07-08 00:52:09.511522",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",

@@ -164,7 +164,8 @@
   "column_break_114",
   "auto_repeat",
   "update_auto_repeat_reference",
-  "per_received"
+  "per_received",
+  "name_comment"
  ],
  "fields": [
   {
@@ -1377,13 +1378,18 @@
    "no_copy": 1,
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "name_comment",
+   "fieldtype": "Data",
+   "label": "comment"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 204,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-06-15 18:20:56.806195",
+ "modified": "2021-08-04 23:38:43.258879",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Purchase Invoice",

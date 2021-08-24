@@ -446,6 +446,25 @@ erpnext.buying.PurchaseOrderController = erpnext.buying.BuyingController.extend(
 				})
 			}, __("Get Items From"));
 
+
+			this.frm.add_custom_button(__('asset'),
+				function() {
+					erpnext.utils.map_current_doc({
+						method: "erpnext.assets.doctype.asset-maintenance.asset-maintenance.make_purchase_order",
+						source_doctype: "asset-maintenance",
+						target: me.frm,
+						setters: {
+							asset_name: me.frm.doc.asset_maintenance,
+							valid_till: undefined
+						},
+						get_query_filters: {
+							docstatus: 1,
+						//	status: ["not in", ["Stopped", "Expired"]],
+						}
+					})
+				}, __("Get Items From"));
+
+
 		this.frm.add_custom_button(__('Update Rate as per Last Purchase'),
 			function() {
 				frappe.call({

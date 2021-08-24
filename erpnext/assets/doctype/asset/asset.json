@@ -484,13 +484,9 @@
  ],
  "idx": 72,
  "image_field": "image",
+ "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [
-  {
-   "group": "Maintenance",
-   "link_doctype": "Asset Maintenance",
-   "link_fieldname": "asset_name"
-  },
   {
    "group": "Repair",
    "link_doctype": "Asset Repair",
@@ -500,9 +496,13 @@
    "group": "Value",
    "link_doctype": "Asset Value Adjustment",
    "link_fieldname": "asset"
+  },
+  {
+   "link_doctype": "Wish",
+   "link_fieldname": "child_wish"
   }
  ],
- "modified": "2021-01-22 12:38:59.091510",
+ "modified": "2021-08-05 15:19:20.653839",
  "modified_by": "Administrator",
  "module": "Assets",
  "name": "Asset",

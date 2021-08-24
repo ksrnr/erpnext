@@ -153,6 +153,7 @@
    "fieldtype": "Select",
    "label": "Series",
    "options": "STO-ITEM-.YYYY.-",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -1067,7 +1068,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "max_attachments": 1,
- "modified": "2021-03-18 14:04:38.575519",
+ "modified": "2021-08-04 19:12:15.045889",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",
@@ -1137,5 +1138,7 @@
  "sort_field": "idx desc,modified desc",
  "sort_order": "DESC",
  "title_field": "item_name",
- "track_changes": 1
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }
