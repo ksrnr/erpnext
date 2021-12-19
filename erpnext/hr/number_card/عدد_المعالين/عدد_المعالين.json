@@ -1,0 +1,22 @@
+{
+ "color": "#29CD42",
+ "creation": "2021-09-15 14:05:47.444907",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Insurance information",
+ "filters_json": "[]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "\u0639\u062f\u062f \u0627\u0644\u0645\u0633\u062c\u0644\u064a\u0646",
+ "modified": "2021-09-15 14:10:16.706887",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "\u0639\u062f\u062f \u0627\u0644\u0645\u0639\u0627\u0644\u064a\u0646",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

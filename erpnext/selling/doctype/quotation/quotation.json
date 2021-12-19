@@ -72,6 +72,7 @@
   "apply_discount_on",
   "base_discount_amount",
   "column_break_46",
+  "additional_discount",
   "additional_discount_percentage",
   "discount_amount",
   "totals",
@@ -611,10 +612,12 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "additional_discount.additional_discount",
    "fieldname": "additional_discount_percentage",
    "fieldtype": "Float",
    "label": "Additional Discount Percentage",
-   "print_hide": 1
+   "print_hide": 1,
+   "read_only": 1
   },
   {
    "fieldname": "discount_amount",
@@ -926,6 +929,11 @@
    "label": "Lost Reasons",
    "options": "Quotation Lost Reason Detail",
    "read_only": 1
+  },
+  {
+   "fieldname": "additional_discount",
+   "fieldtype": "Data",
+   "label": "Additional Discount Percentage"
   }
  ],
  "icon": "fa fa-shopping-cart",
@@ -933,7 +941,7 @@
  "is_submittable": 1,
  "links": [],
  "max_attachments": 1,
- "modified": "2020-10-30 13:58:59.212060",
+ "modified": "2021-11-24 18:04:33.824960",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Quotation",

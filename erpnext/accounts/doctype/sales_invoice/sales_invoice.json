@@ -188,7 +188,8 @@
   "column_break_140",
   "auto_repeat",
   "update_auto_repeat_reference",
-  "against_income_account"
+  "against_income_account",
+  "work_order"
  ],
  "fields": [
   {
@@ -1677,7 +1678,6 @@
    "oldfieldtype": "Link",
    "options": "Account",
    "print_hide": 1,
-   "reqd": 1,
    "search_index": 1
   },
   {
@@ -1974,6 +1974,11 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "VAT Reg. No."
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Data",
+   "label": "work order "
   }
  ],
  "icon": "fa fa-file-text",
@@ -1986,7 +1991,7 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2021-07-08 00:52:09.511522",
+ "modified": "2021-11-01 14:03:44.919848",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",

@@ -10,6 +10,7 @@
  "hide_custom": 0,
  "icon": "quality",
  "idx": 0,
+ "is_default": 0,
  "is_standard": 1,
  "label": "Quality",
  "links": [
@@ -130,10 +131,27 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Reviews And Feedback",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality Reviews And Feedback",
+   "link_to": "Quality Reviews And Feedback",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2020-12-01 13:38:35.120213",
- "modified_by": "Administrator",
+ "modified": "2021-12-09 16:50:13.805159",
+ "modified_by": "Arwaibrahim109@gmail.com",
  "module": "Quality Management",
  "name": "Quality",
  "owner": "Administrator",

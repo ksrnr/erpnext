@@ -43,6 +43,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "SWIFT number",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -101,7 +102,7 @@
   }
  ],
  "links": [],
- "modified": "2020-07-17 14:00:13.105433",
+ "modified": "2021-11-24 12:31:57.845372",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Bank",

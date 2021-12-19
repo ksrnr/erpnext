@@ -29,6 +29,10 @@
   {
    "chart": "Top Suppliers",
    "width": "Full"
+  },
+  {
+   "chart": "\u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u0645\u0634\u062a\u064a\u0627\u062a",
+   "width": "Half"
   }
  ],
  "creation": "2020-07-20 21:01:02.541065",
@@ -36,10 +40,10 @@
  "docstatus": 0,
  "doctype": "Dashboard",
  "idx": 0,
- "is_default": 1,
+ "is_default": 0,
  "is_standard": 1,
- "modified": "2020-07-22 12:48:38.112744",
- "modified_by": "Administrator",
+ "modified": "2021-11-29 02:19:16.409021",
+ "modified_by": "aarasin@saudi-bti.com",
  "module": "Buying",
  "name": "Buying",
  "owner": "Administrator"

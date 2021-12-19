@@ -310,6 +310,7 @@
    "fieldname": "mobile_no",
    "fieldtype": "Data",
    "label": "Mobile No",
+   "length": 10,
    "options": "Phone"
   },
   {
@@ -318,7 +319,7 @@
    "fieldtype": "Data",
    "label": "Email Id",
    "options": "Email",
-   "unique": 1
+   "unique": 0
   },
   {
    "fieldname": "column_break_26",
@@ -503,7 +504,8 @@
   {
    "fieldname": "vat_reg_no",
    "fieldtype": "Data",
-   "label": "VAT Reg. No."
+   "label": "VAT Reg. No.",
+   "translatable": 1
   },
   {
    "fieldname": "city_cust",
@@ -528,7 +530,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-08-18 00:40:00.709294",
+ "modified": "2021-11-24 16:57:42.508424",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",

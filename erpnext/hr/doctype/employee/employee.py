@@ -282,7 +282,32 @@ def update_user_permissions(doc, method):
 	if "Employee" in [d.role for d in doc.get("roles")]:
 		if not has_permission('User Permission', ptype='write', raise_exception=False): return
 		employee = frappe.get_doc("Employee", {"user_id": doc.name})
-		employee.update_user_permissions()
+		update_user_permissions2(employee)
+
+def update_user_permissions2(employee):
+	if not employee.create_user_permission: return
+	if not has_permission('User Permission', ptype='write', raise_exception=False): return
+
+	employee_user_permission_exists = frappe.db.exists('User Permission', {
+		'allow': 'Employee',
+		'for_value': employee.name,
+		'user': employee.user_id
+	})
+
+	if employee_user_permission_exists: return
+
+	employee_user_permission_exists = frappe.db.exists('User Permission', {
+		'allow': 'Employee',
+		'for_value': employee.name,
+		'user': employee.user_id
+	})
+
+	if employee_user_permission_exists: return
+
+	add_user_permission("Employee", employee.name, employee.user_id)
+	set_user_permission_if_allowed("Company", employee.company, employee.user_id)
+
+
 
 def send_birthday_reminders():
 	"""Send Employee birthday reminders if no 'Stop Birthday Reminders' is not set."""

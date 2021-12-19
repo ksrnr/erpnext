@@ -14,6 +14,7 @@
   "column_break_5",
   "posting_date",
   "company",
+  "branch",
   "mode_of_payment",
   "party_section",
   "party_type",
@@ -702,12 +703,18 @@
    "fieldtype": "Currency",
    "label": "Received Amount After Tax (Company Currency)",
    "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-06-22 20:37:06.154206",
+ "modified": "2021-10-30 16:23:18.448290",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Payment Entry",
