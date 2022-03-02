@@ -187,7 +187,7 @@ erpnext.buying.PurchaseOrderController = erpnext.buying.BuyingController.extend(
 					if(flt(doc.per_billed) < 100)
 						cur_frm.add_custom_button(__('Purchase Invoice'),
 							this.make_purchase_invoice, __('Create'));
-
+							
 					if(flt(doc.per_billed)==0 && doc.status != "Delivered") {
 						cur_frm.add_custom_button(__('Payment'), cur_frm.cscript.make_payment_entry, __('Create'));
 					}
@@ -397,6 +397,14 @@ erpnext.buying.PurchaseOrderController = erpnext.buying.BuyingController.extend(
 			method: "erpnext.buying.doctype.purchase_order.purchase_order.make_purchase_receipt",
 			frm: cur_frm,
 			freeze_message: __("Creating Purchase Receipt ...")
+		})
+	},
+
+	make_contract: function() {
+		frappe.model.open_mapped_doc({
+			method: "erpnext.buying.doctype.purchase_order.purchase_order.make_contract",
+			frm: cur_frm,
+			freeze_message: __("Creating Contract ...")
 		})
 	},
 

@@ -48,7 +48,7 @@
  "icon": "fa fa-flag",
  "idx": 1,
  "links": [],
- "modified": "2020-09-18 17:26:09.703215",
+ "modified": "2022-01-02 13:16:40.387325",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Expense Claim Type",
@@ -70,5 +70,6 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "ASC"
+ "sort_order": "ASC",
+ "track_changes": 1
 }

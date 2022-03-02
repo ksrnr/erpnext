@@ -44,6 +44,17 @@
   "shipping_address_display",
   "billing_address",
   "billing_address_display",
+  "competition_info",
+  "request_competition_proposal",
+  "project_name",
+  "project_duration",
+  "project_type",
+  "column_break_42",
+  "project_amount",
+  "project_amount_write",
+  "etmad_id",
+  "duration_of_the_contract",
+  "duration_of_the_contract_in",
   "currency_and_price_list",
   "currency",
   "conversion_rate",
@@ -443,12 +454,14 @@
   {
    "fieldname": "sec_warehouse",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Subcontracting"
   },
   {
    "description": "Sets 'Warehouse' in each row of the Items table.",
    "fieldname": "set_warehouse",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Set Target Warehouse",
    "options": "Warehouse",
    "print_hide": 1
@@ -461,6 +474,7 @@
    "default": "No",
    "fieldname": "is_subcontracted",
    "fieldtype": "Select",
+   "hidden": 1,
    "in_standard_filter": 1,
    "label": "Supply Raw Materials",
    "options": "No\nYes",
@@ -470,6 +484,7 @@
    "depends_on": "eval:doc.is_subcontracted==\"Yes\"",
    "fieldname": "supplier_warehouse",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Supplier Warehouse",
    "options": "Warehouse"
   },
@@ -483,17 +498,18 @@
   {
    "fieldname": "scan_barcode",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Scan Barcode"
   },
   {
    "allow_bulk_edit": 1,
    "fieldname": "items",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "Items",
    "oldfieldname": "po_details",
    "oldfieldtype": "Table",
-   "options": "Purchase Order Item",
-   "reqd": 1
+   "options": "Purchase Order Item"
   },
   {
    "collapsible": 1,
@@ -604,6 +620,7 @@
   {
    "fieldname": "shipping_rule",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Shipping Rule",
    "options": "Shipping Rule",
    "print_hide": 1
@@ -717,12 +734,14 @@
    "collapsible_depends_on": "apply_discount_on",
    "fieldname": "discount_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Additional Discount"
   },
   {
    "default": "Grand Total",
    "fieldname": "apply_discount_on",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Apply Additional Discount On",
    "options": "\nGrand Total\nNet Total",
    "print_hide": 1
@@ -730,6 +749,7 @@
   {
    "fieldname": "base_discount_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Additional Discount Amount (Company Currency)",
    "options": "Company:company:default_currency",
    "print_hide": 1,
@@ -742,12 +762,14 @@
   {
    "fieldname": "additional_discount_percentage",
    "fieldtype": "Float",
+   "hidden": 1,
    "label": "Additional Discount Percentage",
    "print_hide": 1
   },
   {
    "fieldname": "discount_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Additional Discount Amount",
    "options": "currency",
    "print_hide": 1
@@ -755,11 +777,13 @@
   {
    "fieldname": "totals_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Totals"
   },
   {
    "fieldname": "base_grand_total",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Grand Total (Company Currency)",
    "no_copy": 1,
    "oldfieldname": "grand_total",
@@ -772,6 +796,7 @@
    "depends_on": "eval:!doc.disable_rounded_total",
    "fieldname": "base_rounding_adjustment",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Rounding Adjustment (Company Currency)",
    "no_copy": 1,
    "options": "Company:company:default_currency",
@@ -782,6 +807,7 @@
    "description": "In Words will be visible once you save the Purchase Order.",
    "fieldname": "base_in_words",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "In Words (Company Currency)",
    "length": 240,
    "oldfieldname": "in_words",
@@ -792,6 +818,7 @@
   {
    "fieldname": "base_rounded_total",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Rounded Total (Company Currency)",
    "oldfieldname": "rounded_total",
    "oldfieldtype": "Currency",
@@ -807,6 +834,7 @@
   {
    "fieldname": "grand_total",
    "fieldtype": "Currency",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Grand Total",
    "oldfieldname": "grand_total_import",
@@ -818,6 +846,7 @@
    "depends_on": "eval:!doc.disable_rounded_total",
    "fieldname": "rounding_adjustment",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Rounding Adjustment",
    "no_copy": 1,
    "options": "currency",
@@ -827,6 +856,7 @@
   {
    "fieldname": "rounded_total",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Rounded Total",
    "options": "currency",
    "read_only": 1
@@ -860,17 +890,20 @@
    "collapsible": 1,
    "fieldname": "payment_schedule_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Payment Terms"
   },
   {
    "fieldname": "payment_terms_template",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Payment Terms Template",
    "options": "Payment Terms Template"
   },
   {
    "fieldname": "payment_schedule",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "Payment Schedule",
    "no_copy": 1,
    "options": "Payment Schedule",
@@ -881,6 +914,7 @@
    "collapsible_depends_on": "terms",
    "fieldname": "terms_section_break",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Terms and Conditions",
    "oldfieldtype": "Section Break",
    "options": "fa fa-legal"
@@ -888,6 +922,7 @@
   {
    "fieldname": "tc_name",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Terms",
    "oldfieldname": "tc_name",
    "oldfieldtype": "Link",
@@ -897,6 +932,7 @@
   {
    "fieldname": "terms",
    "fieldtype": "Text Editor",
+   "hidden": 1,
    "label": "Terms and Conditions",
    "oldfieldname": "terms",
    "oldfieldtype": "Text Editor"
@@ -905,6 +941,7 @@
    "collapsible": 1,
    "fieldname": "more_info",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "More Information",
    "oldfieldtype": "Section Break"
   },
@@ -912,6 +949,7 @@
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
+   "hidden": 1,
    "in_standard_filter": 1,
    "label": "Status",
    "no_copy": 1,
@@ -926,6 +964,7 @@
   {
    "fieldname": "ref_sq",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Supplier Quotation",
    "no_copy": 1,
    "oldfieldname": "ref_sq",
@@ -947,18 +986,21 @@
   {
    "fieldname": "inter_company_order_reference",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Inter Company Order Reference",
    "options": "Sales Order",
    "read_only": 1
   },
   {
    "fieldname": "column_break_74",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "hidden": 1
   },
   {
    "depends_on": "eval:!doc.__islocal",
    "fieldname": "per_received",
    "fieldtype": "Percent",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "% Received",
    "no_copy": 1,
@@ -979,6 +1021,7 @@
    "collapsible": 1,
    "fieldname": "column_break5",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Printing Settings",
    "oldfieldtype": "Column Break",
    "print_hide": 1,
@@ -1029,12 +1072,14 @@
    "collapsible": 1,
    "fieldname": "subscription_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Subscription Section"
   },
   {
    "allow_on_submit": 1,
    "fieldname": "from_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "From Date",
    "no_copy": 1,
    "print_hide": 1
@@ -1043,6 +1088,7 @@
    "allow_on_submit": 1,
    "fieldname": "to_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "To Date",
    "no_copy": 1,
    "print_hide": 1
@@ -1054,6 +1100,7 @@
   {
    "fieldname": "auto_repeat",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Auto Repeat",
    "no_copy": 1,
    "options": "Auto Repeat",
@@ -1065,11 +1112,13 @@
    "depends_on": "eval: doc.auto_repeat",
    "fieldname": "update_auto_repeat_reference",
    "fieldtype": "Button",
+   "hidden": 1,
    "label": "Update Auto Repeat Reference"
   },
   {
    "fieldname": "tax_category",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Tax Category",
    "options": "Tax Category"
   },
@@ -1104,23 +1153,27 @@
   },
   {
    "fieldname": "before_items_section",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "items_col_break",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "hidden": 1
   },
   {
    "default": "0",
    "fetch_from": "supplier.is_internal_supplier",
    "fieldname": "is_internal_supplier",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is Internal Supplier"
   },
   {
    "fetch_from": "supplier.represents_company",
    "fieldname": "represents_company",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Represents Company",
    "options": "Company",
    "read_only": 1
@@ -1143,13 +1196,74 @@
    "fieldname": "get_list_from_open_asset_maintenance",
    "fieldtype": "Button",
    "label": "Get Items from Open Asset Maintenance"
+  },
+  {
+   "fieldname": "competition_info",
+   "fieldtype": "Section Break",
+   "label": "\u0645\u0639\u0644\u0648\u0645\u0627\u062a \u0627\u0644\u0645\u0646\u0627\u0641\u0633\u0629"
+  },
+  {
+   "fetch_from": "request_competition_proposal.competition_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "\u0627\u0633\u0645 \u0627\u0644\u0645\u0646\u0627\u0641\u0633\u0629"
+  },
+  {
+   "fieldname": "project_amount",
+   "fieldtype": "Currency",
+   "label": "\u0627\u0644\u0645\u0628\u0644\u063a \u0631\u0642\u0645\u0627\u064b"
+  },
+  {
+   "fieldname": "project_amount_write",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0645\u0628\u0644\u063a \u0643\u062a\u0627\u0628\u0629\u064b"
+  },
+  {
+   "fieldname": "project_duration",
+   "fieldtype": "Data",
+   "label": "\u0645\u062f\u0629 \u062a\u0646\u0641\u064a\u0630 \u0627\u0644\u0645\u0634\u0631\u0648\u0639"
+  },
+  {
+   "fetch_from": "request_competition_proposal.duration_of_the_contract",
+   "fieldname": "duration_of_the_contract",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "\u0645\u062f\u0629 \u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0628\u0627\u0644\u0631\u0642\u0645"
+  },
+  {
+   "fetch_from": "request_competition_proposal.duration_of_the_contract_in",
+   "fieldname": "duration_of_the_contract_in",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "\u0645\u062f\u0629 \u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0628\u0627\u0644\u0627\u064a\u0627\u0645"
+  },
+  {
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "request_competition_proposal.contract_type",
+   "fieldname": "project_type",
+   "fieldtype": "Data",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u0645\u0646\u0627\u0641\u0633\u0629"
+  },
+  {
+   "fieldname": "request_competition_proposal",
+   "fieldtype": "Link",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0645\u0646\u0627\u0641\u0633\u0629",
+   "options": "Request Competition Proposal"
+  },
+  {
+   "fieldname": "etmad_id",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0631\u0642\u0645 \u0627\u0644\u0645\u0631\u062c\u0639\u064a \u0644\u0644\u0645\u0646\u0627\u0641\u0633\u0629 \u0641\u064a \u0645\u0646\u0635\u0629 \u0627\u0639\u062a\u0645\u0627\u062f"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-08-22 15:20:22.570707",
+ "modified": "2022-03-01 16:34:13.331679",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order",

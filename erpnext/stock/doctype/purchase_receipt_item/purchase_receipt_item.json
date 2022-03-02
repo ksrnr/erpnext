@@ -135,7 +135,6 @@
    "oldfieldtype": "Link",
    "options": "Item",
    "print_width": "100px",
-   "reqd": 1,
    "search_index": 1,
    "width": "100px"
   },
@@ -157,8 +156,7 @@
    "label": "Item Name",
    "oldfieldname": "item_name",
    "oldfieldtype": "Data",
-   "print_hide": 1,
-   "reqd": 1
+   "print_hide": 1
   },
   {
    "collapsible": 1,
@@ -173,7 +171,6 @@
    "oldfieldname": "description",
    "oldfieldtype": "Text",
    "print_width": "300px",
-   "reqd": 1,
    "width": "300px"
   },
   {
@@ -203,7 +200,6 @@
    "oldfieldtype": "Currency",
    "print_hide": 1,
    "print_width": "100px",
-   "reqd": 1,
    "width": "100px"
   },
   {
@@ -240,7 +236,6 @@
    "oldfieldtype": "Link",
    "options": "UOM",
    "print_width": "100px",
-   "reqd": 1,
    "width": "100px"
   },
   {
@@ -253,7 +248,6 @@
    "print_hide": 1,
    "print_width": "100px",
    "read_only": 1,
-   "reqd": 1,
    "width": "100px"
   },
   {
@@ -264,7 +258,6 @@
    "oldfieldtype": "Currency",
    "print_hide": 1,
    "print_width": "100px",
-   "reqd": 1,
    "width": "100px"
   },
   {
@@ -361,7 +354,6 @@
    "print_hide": 1,
    "print_width": "100px",
    "read_only": 1,
-   "reqd": 1,
    "width": "100px"
   },
   {
@@ -961,7 +953,7 @@
  "idx": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-03-29 04:17:00.336298",
+ "modified": "2022-02-15 19:57:53.949044",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Purchase Receipt Item",

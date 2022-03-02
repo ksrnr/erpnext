@@ -11,6 +11,7 @@
   "naming_series",
   "employee",
   "employee_name",
+  "request_day",
   "column_break_4",
   "leave_type",
   "department",
@@ -231,6 +232,7 @@
    "allow_on_submit": 1,
    "fieldname": "color",
    "fieldtype": "Color",
+   "hidden": 1,
    "label": "Color",
    "print_hide": 1
   },
@@ -243,6 +245,13 @@
    "options": "Leave Application",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_day",
+   "fieldtype": "Date",
+   "label": "Request Day",
+   "read_only": 1
   }
  ],
  "icon": "fa fa-calendar",
@@ -250,7 +259,7 @@
  "is_submittable": 1,
  "links": [],
  "max_attachments": 3,
- "modified": "2020-05-18 13:00:41.577327",
+ "modified": "2022-02-21 15:40:01.307725",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Leave Application",
@@ -327,6 +336,21 @@
    "read": 1,
    "report": 1,
    "role": "Leave Approver",
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

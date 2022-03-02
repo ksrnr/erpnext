@@ -348,6 +348,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Leave Control Panel",
+   "link_to": "Leave Control Panel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Attendance",
    "onboard": 0,
    "type": "Card Break"
@@ -682,6 +691,68 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Training Request",
+   "link_to": "Training Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Course",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Course",
+   "link_to": "Course",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Topic",
+   "link_to": "Topic",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Video",
+   "link_to": "Video",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Article",
+   "link_to": "Article",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quiz",
+   "link_to": "Quiz",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Performance",
    "onboard": 0,
    "type": "Card Break"
@@ -850,7 +921,7 @@
    "type": "Link"
   }
  ],
- "modified": "2021-08-14 07:02:56.992384",
+ "modified": "2022-01-30 12:12:56.809570",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "HR",
@@ -897,6 +968,12 @@
    "link_to": "Human Resource",
    "stats_filter": "{\n    \"status\": \"Open\"\n}",
    "type": "Dashboard"
+  },
+  {
+   "doc_view": "",
+   "label": "Training Request",
+   "link_to": "Training Request",
+   "type": "DocType"
   }
  ]
 }

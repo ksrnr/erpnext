@@ -113,6 +113,7 @@ def update_totals(vat_tax, base_vat_tax, doc):
 			doc.outstanding_amount = doc.rounded_total or doc.grand_total
 
 	doc.in_words = money_in_words(doc.grand_total, doc.currency)
+	doc.project_amount_write = money_in_words(doc.project_amount, doc.currency)
 	doc.base_in_words = money_in_words(doc.base_grand_total, erpnext.get_company_currency(doc.company))
 	doc.set_payment_schedule()
 

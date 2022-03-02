@@ -3,7 +3,7 @@
  "allow_events_in_timeline": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "SUP-.#####",
+ "autoname": "naming_series:",
  "creation": "2013-01-10 16:34:11",
  "description": "Supplier of Goods or Services.",
  "doctype": "DocType",
@@ -79,7 +79,7 @@
    "no_copy": 1,
    "oldfieldname": "naming_series",
    "oldfieldtype": "Select",
-   "options": "SUP-.YYYY.-",
+   "options": "SUP -.#####",
    "reqd": 1,
    "translatable": 1
   },
@@ -391,9 +391,14 @@
    "group": "Item Group",
    "link_doctype": "Supplier Item Group",
    "link_fieldname": "supplier"
+  },
+  {
+   "group": "Government Procurement",
+   "link_doctype": "Contract",
+   "link_fieldname": "party_type"
   }
  ],
- "modified": "2021-11-22 19:25:27.027858",
+ "modified": "2022-02-01 13:53:40.218928",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Supplier",

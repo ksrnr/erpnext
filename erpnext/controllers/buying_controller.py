@@ -154,6 +154,7 @@ class BuyingController(StockController, Subcontracting):
 
 	def set_total_in_words(self):
 		from frappe.utils import money_in_words
+		
 		if self.meta.get_field("base_in_words"):
 			if self.meta.get_field("base_rounded_total") and not self.is_rounded_total_disabled():
 				amount = self.base_rounded_total
@@ -168,6 +169,15 @@ class BuyingController(StockController, Subcontracting):
 				amount = self.grand_total
 
 			self.in_words = money_in_words(amount, self.currency)
+
+		if self.meta.get_field("project_amount_write"):
+			if self.meta.get_field("project_amount") :
+				print("Here I am")
+				print(self.project_amount)
+				amount = self.project_amount
+			else:
+				amount = self.project_amount
+			self.project_amount_write = money_in_words(amount, self.currency)
 
 	# update valuation rate
 	def update_valuation_rate(self, reset_outgoing_rate=True):

@@ -153,7 +153,6 @@
    "fieldtype": "Select",
    "label": "Series",
    "options": "STO-ITEM-.YYYY.-",
-   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -164,7 +163,6 @@
    "label": "Item Code",
    "oldfieldname": "item_code",
    "oldfieldtype": "Data",
-   "reqd": 1,
    "unique": 1
   },
   {
@@ -200,7 +198,6 @@
    "oldfieldname": "item_group",
    "oldfieldtype": "Link",
    "options": "Item Group",
-   "reqd": 1,
    "search_index": 1
   },
   {
@@ -217,8 +214,7 @@
    "label": "Default Unit of Measure",
    "oldfieldname": "stock_uom",
    "oldfieldtype": "Link",
-   "options": "UOM",
-   "reqd": 1
+   "options": "UOM"
   },
   {
    "fieldname": "column_break0",
@@ -1068,7 +1064,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "max_attachments": 1,
- "modified": "2021-08-04 19:12:15.045889",
+ "modified": "2022-03-01 16:33:37.651338",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",
