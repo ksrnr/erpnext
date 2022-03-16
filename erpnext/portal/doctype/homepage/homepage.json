@@ -59,12 +59,13 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.hero_section_based_on === 'Default'",
    "description": "Company Description for website homepage",
    "fieldname": "description",
    "fieldtype": "Text",
-   "hidden": 1,
    "in_list_view": 1,
-   "label": "Description"
+   "label": "Description",
+   "reqd": 1
   },
   {
    "depends_on": "eval:doc.hero_section_based_on === 'Default'",
@@ -92,7 +93,7 @@
    "label": "Products"
   },
   {
-   "default": "/products",
+   "default": "/all-products",
    "fieldname": "products_url",
    "fieldtype": "Data",
    "label": "URL for \"All Products\""
@@ -108,7 +109,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2021-10-17 15:35:45.547000",
+ "modified": "2021-02-18 13:29:29.531639",
  "modified_by": "Administrator",
  "module": "Portal",
  "name": "Homepage",

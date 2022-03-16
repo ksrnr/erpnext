@@ -19,10 +19,6 @@
    "width": "Full"
   },
   {
-   "chart": "Lead Source",
-   "width": "Full"
-  },
-  {
    "chart": "Opportunity Trends",
    "width": "Full"
   },
@@ -41,6 +37,10 @@
   {
    "chart": "Territory Wise Sales",
    "width": "Full"
+  },
+  {
+   "chart": "Lead Source",
+   "width": "Half"
   }
  ],
  "creation": "2020-07-20 20:17:15.985657",
@@ -50,7 +50,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2021-08-17 05:25:08.448367",
+ "modified": "2020-07-21 18:56:47.230053",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "CRM",

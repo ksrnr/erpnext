@@ -52,6 +52,7 @@
    "oldfieldtype": "Link",
    "options": "Account",
    "print_width": "250px",
+   "reqd": 1,
    "search_index": 1,
    "width": "250px"
   },
@@ -279,7 +280,7 @@
  "idx": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-12-26 17:19:31.136271",
+ "modified": "2020-06-26 14:06:54.833738",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Journal Entry Account",
