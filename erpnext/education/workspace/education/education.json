@@ -15,7 +15,6 @@
  "hide_custom": 0,
  "icon": "education",
  "idx": 0,
- "is_default": 0,
  "is_standard": 1,
  "label": "Education",
  "links": [
@@ -631,7 +630,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-01-30 11:24:19.999147",
+ "modified": "2020-12-01 13:38:37.448989",
  "modified_by": "Administrator",
  "module": "Education",
  "name": "Education",

@@ -7,7 +7,7 @@
   }
  ],
  "creation": "2020-03-02 15:43:27.634865",
- "developer_mode_only": 1,
+ "developer_mode_only": 0,
  "disable_user_customization": 0,
  "docstatus": 0,
  "doctype": "Workspace",
@@ -15,7 +15,6 @@
  "hide_custom": 0,
  "icon": "assets",
  "idx": 0,
- "is_default": 0,
  "is_standard": 1,
  "label": "Assets",
  "links": [
@@ -161,7 +160,7 @@
    "type": "Link"
   }
  ],
- "modified": "2021-07-04 11:50:52.814388",
+ "modified": "2020-12-01 13:38:37.977119",
  "modified_by": "Administrator",
  "module": "Assets",
  "name": "Assets",

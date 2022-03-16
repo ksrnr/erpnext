@@ -2,7 +2,6 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series",
  "creation": "2018-04-12 06:32:04.582486",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -42,11 +41,12 @@
  ],
  "fields": [
   {
-   "default": "Supplier",
+   "default": "Customer",
    "fieldname": "party_type",
    "fieldtype": "Select",
    "label": "Party Type",
-   "options": "Customer\nSupplier\nEmployee"
+   "options": "Customer\nSupplier\nEmployee",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -61,12 +61,12 @@
    "fieldtype": "Column Break"
   },
   {
-   "allow_on_submit": 1,
    "fieldname": "party_name",
    "fieldtype": "Dynamic Link",
    "in_standard_filter": 1,
    "label": "Party Name",
-   "options": "party_type"
+   "options": "party_type",
+   "reqd": 1
   },
   {
    "fieldname": "party_user",
@@ -166,7 +166,8 @@
    "fieldname": "contract_terms",
    "fieldtype": "Text Editor",
    "in_list_view": 1,
-   "label": "Contract Terms"
+   "label": "Contract Terms",
+   "reqd": 1
   },
   {
    "fieldname": "sb_fulfilment",
@@ -247,7 +248,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2022-03-01 13:54:03.173151",
+ "modified": "2020-12-07 11:15:58.385521",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Contract",
