@@ -204,8 +204,8 @@
    "dependencies": "Item",
    "hidden": 0,
    "is_query_report": 1,
-   "label": "Stock Ledger CoMo",
-   "link_to": "Stock Ledger CoMo",
+   "label": "Stock Ledger",
+   "link_to": "Stock Ledger",
    "link_type": "Report",
    "onboard": 1,
    "type": "Link"
@@ -216,16 +216,6 @@
    "is_query_report": 1,
    "label": "Stock Balance",
    "link_to": "Stock Balance",
-   "link_type": "Report",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Item",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Stock Ledger",
-   "link_to": "Stock Ledger",
    "link_type": "Report",
    "onboard": 1,
    "type": "Link"
@@ -701,7 +691,7 @@
    "type": "Link"
   }
  ],
- "modified": "2021-07-11 10:17:54.099208",
+ "modified": "2021-05-13 13:10:24.914983",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock",
@@ -748,8 +738,8 @@
    "type": "DocType"
   },
   {
-   "label": "Stock Ledger CoMo",
-   "link_to": "Stock Ledger CoMo",
+   "label": "Stock Ledger",
+   "link_to": "Stock Ledger",
    "type": "Report"
   },
   {

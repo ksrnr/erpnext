@@ -20,14 +20,13 @@
   "tax_withholding_category",
   "default_bank_account",
   "lead_name",
-  "customer_status",
+  "opportunity_name",
   "image",
   "column_break0",
   "account_manager",
   "customer_group",
   "territory",
   "tax_id",
-  "vat_reg_no",
   "tax_category",
   "so_required",
   "dn_required",
@@ -46,7 +45,6 @@
   "column_break1",
   "contact_html",
   "primary_address_and_contact_detail",
-  "city_cust",
   "customer_primary_contact",
   "mobile_no",
   "email_id",
@@ -270,6 +268,7 @@
    "options": "fa fa-map-marker"
   },
   {
+   "depends_on": "eval: !doc.__islocal",
    "fieldname": "address_html",
    "fieldtype": "HTML",
    "label": "Address HTML",
@@ -286,6 +285,7 @@
    "width": "50%"
   },
   {
+   "depends_on": "eval: !doc.__islocal",
    "fieldname": "contact_html",
    "fieldtype": "HTML",
    "label": "Contact HTML",
@@ -308,18 +308,14 @@
   {
    "fetch_from": "customer_primary_contact.mobile_no",
    "fieldname": "mobile_no",
-   "fieldtype": "Data",
-   "label": "Mobile No",
-   "length": 10,
-   "options": "Phone"
+   "fieldtype": "Read Only",
+   "label": "Mobile No"
   },
   {
    "fetch_from": "customer_primary_contact.email_id",
    "fieldname": "email_id",
-   "fieldtype": "Data",
-   "label": "Email Id",
-   "options": "Email",
-   "unique": 0
+   "fieldtype": "Read Only",
+   "label": "Email Id"
   },
   {
    "fieldname": "column_break_26",
@@ -502,35 +498,26 @@
    "options": "Tax Withholding Category"
   },
   {
-   "fieldname": "vat_reg_no",
-   "fieldtype": "Data",
-   "label": "VAT Reg. No.",
-   "translatable": 1
-  },
-  {
-   "fieldname": "city_cust",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "City",
-   "options": "Riyadh\nJeddah\nMakkah\nTaif\nMadina\nDammam\nQatif\nTarut\nKhobar\nSaihat\nJubail\nRas Tanura\nOnaizah\nAsir\nAbha\nAl Baha\nKhamis Mushait\nJazan\nQassim\nHail\nHafir Al Batin\nRafha\nSkaka\nBuraidah\nAL Hassa\nAl Houfof\nSajir\nAl Kharj\nShaybah\nAl Kafji\nAl jishah\nAl Mobaraz\nAl Namas\nAl Quwaiyah\nSafwa\nAr Rass\nAl Ula\nAl-qudaih\nAn Nuayriyah\nArar\nbqaiq\nDahran\nDhahban\nThuwal\nYanbu\nHaql\nTabuk\nHaradh"
-  },
-  {
-   "allow_in_quick_entry": 1,
-   "fieldname": "customer_status",
-   "fieldtype": "Select",
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "label": "Customer Status",
-   "options": "\nVerified\nUnder Review\nCancelled",
-   "translatable": 1
+   "fieldname": "opportunity_name",
+   "fieldtype": "Link",
+   "label": "From Opportunity",
+   "no_copy": 1,
+   "options": "Opportunity",
+   "print_hide": 1
   }
  ],
  "icon": "fa fa-user",
  "idx": 363,
  "image_field": "image",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2021-11-24 16:57:42.508424",
+ "links": [
+  {
+   "group": "Allowed Items",
+   "link_doctype": "Party Specific Item",
+   "link_fieldname": "party"
+  }
+ ],
+ "modified": "2021-09-06 17:38:54.196663",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
